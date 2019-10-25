@@ -167,6 +167,8 @@ void IMU::testImu(std::string src, std::string dist)
         Vw = Vw + mid_acc_w * dt;
         last_acc = imupose.imu_acc;
         last_gyro = imupose.imu_gyro;
+
+        
         //　按着imu postion, imu quaternion , cam postion, cam quaternion 的格式存储，由于没有cam，所以imu存了两次
         save_points<<imupose.timestamp<<" "
                    <<Qwb.w()<<" "
