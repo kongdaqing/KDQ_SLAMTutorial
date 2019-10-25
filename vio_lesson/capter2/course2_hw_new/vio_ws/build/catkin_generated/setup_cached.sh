@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src:$ROS_PACKAGE_PATH"
+export PWD="/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build"
