@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -O3   CMakeFiles/lesson1.dir/src/lesson1.cpp.o  -o lesson1 

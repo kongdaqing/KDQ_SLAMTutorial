@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zx/workspace/KDQ_SLAM_ws/src/KDQ_SLAM/vio_lesson/src/lesson1.cpp
+iostream
+-
+eigen3/Eigen/Dense
+-
+
