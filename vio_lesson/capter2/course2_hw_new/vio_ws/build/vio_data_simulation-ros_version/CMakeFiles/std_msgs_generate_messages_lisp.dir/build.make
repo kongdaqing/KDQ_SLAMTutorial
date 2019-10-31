@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src
+CMAKE_SOURCE_DIR = /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build
+CMAKE_BINARY_DIR = /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/b
 .PHONY : vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version /home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version /home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build/vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vio_data_simulation-ros_version/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 

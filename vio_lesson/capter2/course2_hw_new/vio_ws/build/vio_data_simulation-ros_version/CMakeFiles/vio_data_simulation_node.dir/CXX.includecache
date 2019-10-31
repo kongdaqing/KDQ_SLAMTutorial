@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/gener_alldata.cpp
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/gener_alldata.cpp
 ros/ros.h
 -
 rosbag/bag.h
@@ -16,19 +16,19 @@ sensor_msgs/Imu.h
 fstream
 -
 imu.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
 utilities.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.cpp
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.cpp
 random
 -
 imu.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
 utilities.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Geometry
@@ -38,23 +38,23 @@ iostream
 vector
 -
 param.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.cpp
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.cpp
 param.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/param.h
 eigen3/Eigen/Core
 -
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.cpp
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.cpp
 utilities.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
 
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/utilities.h
 imu.h
-/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
+/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/src/vio_data_simulation-ros_version/src/imu.h
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Geometry

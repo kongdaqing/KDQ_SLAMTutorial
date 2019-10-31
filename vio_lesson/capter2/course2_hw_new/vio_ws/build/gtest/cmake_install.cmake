@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/zx/workspace/KDQ_SLAMTutorial/手写VIO——深蓝学院课程/第二章/course2_hw_new/vio_ws/build/gtest/gtest/cmake_install.cmake")
+  include("/home/kdq/Workspace/KDQ_SLAMTutorial/vio_lesson/capter2/course2_hw_new/vio_ws/build/gtest/gtest/cmake_install.cmake")
 
 endif()
 
