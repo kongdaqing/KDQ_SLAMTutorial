@@ -161,6 +161,7 @@ void IMU::testImu(std::string src, std::string dist)
         Eigen::Vector3d mid_gyro = 0.5*(last_gyro + imupose.imu_gyro);
         Eigen::Quaterniond delta_q = Eigen::Quaterniond(1,mid_gyro[0]*dt/2,mid_gyro[1]*dt/2,mid_gyro[2]*dt/2);
         Qwb = Qwb*delta_q;
+        Qwb.normalize();
         Eigen::Vector3d next_acc_w = Qwb * (imupose.imu_acc) + gw;
         Eigen::Vector3d mid_acc_w = 0.5*(next_acc_w + last_acc_w);
         Pwb = Pwb + Vw * dt + 0.5 * dt * dt * mid_acc_w;
