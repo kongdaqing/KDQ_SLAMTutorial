@@ -244,6 +244,7 @@ void Problem::ComputeLambdaInitLM() {
     for (auto edge: edges_) {
         currentChi_ += edge.second->Chi2();
     }
+    // ？
     if (err_prior_.rows() > 0)
         currentChi_ += err_prior_.norm();
 
@@ -252,6 +253,7 @@ void Problem::ComputeLambdaInitLM() {
     double maxDiagonal = 0;
     ulong size = Hessian_.cols();
     assert(Hessian_.rows() == Hessian_.cols() && "Hessian is not square");
+    //KDQ：主对角线上的元素即是特征值？
     for (ulong i = 0; i < size; ++i) {
         maxDiagonal = std::max(fabs(Hessian_(i, i)), maxDiagonal);
     }
@@ -262,6 +264,7 @@ void Problem::ComputeLambdaInitLM() {
 void Problem::AddLambdatoHessianLM() {
     ulong size = Hessian_.cols();
     assert(Hessian_.rows() == Hessian_.cols() && "Hessian is not square");
+    //KDQ： 对角线上特征值加上阻尼系数lambda
     for (ulong i = 0; i < size; ++i) {
         Hessian_(i, i) += currentLambda_;
     }
@@ -282,7 +285,7 @@ bool Problem::IsGoodStepInLM() {
     scale += 1e-3;    // make sure it's non-zero :)
 
     // recompute residuals after update state
-    // 统计所有的残差
+    // 统计所有的残差（已经更新了状态量，所以需要重新计算）
     double tempChi = 0.0;
     for (auto edge: edges_) {
         edge.second->ComputeResidual();
