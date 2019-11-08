@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include "backend/problem.h"
+#include <fstream>
 
 using namespace myslam::backend;
 using namespace std;
@@ -28,17 +29,21 @@ public:
     virtual void ComputeResidual() override
     {
         Vec3 abc = verticies_[0]->Parameters();  // 估计的参数
-        residual_(0) = std::exp( abc(0)*x_*x_ + abc(1)*x_ + abc(2) ) - y_;  // 构建残差
+        //KDQ:
+        //residual_(0) = std::exp( abc(0)*x_*x_ + abc(1)*x_ + abc(2) ) - y_;  // 构建残差
+        residual_(0) = ( abc(0)*x_*x_ + abc(1)*x_ + abc(2) ) - y_; 
     }
 
     // 计算残差对变量的雅克比
     virtual void ComputeJacobians() override
     {
         Vec3 abc = verticies_[0]->Parameters();
-        double exp_y = std::exp( abc(0)*x_*x_ + abc(1)*x_ + abc(2) );
-
+        
+        //KDQ:
+        //double exp_y = std::exp( abc(0)*x_*x_ + abc(1)*x_ + abc(2) );
         Eigen::Matrix<double, 1, 3> jaco_abc;  // 误差为1维，状态量 3 个，所以是 1x3 的雅克比矩阵
-        jaco_abc << x_ * x_ * exp_y, x_ * exp_y , 1 * exp_y;
+        //jaco_abc << x_ * x_ * exp_y, x_ * exp_y , 1 * exp_y;
+        jaco_abc << x_ * x_ , x_, 1;
         jacobians_[0] = jaco_abc;
     }
     /// 返回边的类型信息
@@ -47,17 +52,29 @@ public:
     double x_,y_;  // x 值， y 值为 _measurement
 };
 
-int main()
+int main(int argc,char** argv)
 {
     double a=1.0, b=2.0, c=1.0;         // 真实参数值
-    int N = 100;                          // 数据点
-    double w_sigma= 1.;                 // 噪声Sigma值
-
+    int N = 2000;                          // 数据点
+    //double w_sigma= 1.;                 // 噪声Sigma值
+    //KDQ:
+    double w_sigma = 2;
+    std::ofstream info_model;
+    
     std::default_random_engine generator;
     std::normal_distribution<double> noise(0.,w_sigma);
 
     // 构建 problem
-    Problem problem(Problem::ProblemType::GENERIC_PROBLEM);
+    if (argc !=2)
+    {
+        printf("Please input file path for recording information of optimazition!\n");
+        return -1;
+    }
+    std::string  file_path = argv[1];
+    std::string model_name = file_path + "info_model.cvs";
+    printf("model_name : %s\n",model_name.c_str());
+    info_model.open(model_name);
+    Problem problem(Problem::ProblemType::GENERIC_PROBLEM,file_path);
     shared_ptr< CurveFittingVertex > vertex(new CurveFittingVertex());
 
     // 设定待估计参数 a, b, c初始值
@@ -68,11 +85,15 @@ int main()
     // 构造 N 次观测
     for (int i = 0; i < N; ++i) {
 
-        double x = i/100.;
+        double x = i/200.;
         double n = noise(generator);
         // 观测 y
-        double y = std::exp( a*x*x + b*x + c ) + n;
-//        double y = std::exp( a*x*x + b*x + c );
+        //KDQ:
+        //double true_value = std::exp( a*x*x + b*x + c );
+        double true_value = a*x*x + b*x + c; 
+        double y  = true_value + n;
+        info_model << x << "," << true_value << "," << y << std::endl;
+
 
         // 每个观测对应的残差函数
         shared_ptr< CurveFittingEdge > edge(new CurveFittingEdge(x,y));
@@ -92,7 +113,8 @@ int main()
     std::cout << vertex->Parameters().transpose() << std::endl;
     std::cout << "-------ground truth: " << std::endl;
     std::cout << "1.0,  2.0,  1.0" << std::endl;
-
+  
+    info_model.close();
     // std
     return 0;
 }

@@ -8,6 +8,7 @@
 #include "backend/eigen_types.h"
 #include "backend/edge.h"
 #include "backend/vertex.h"
+#include <fstream>
 
 typedef unsigned long ulong;
 
@@ -37,7 +38,7 @@ public:
 
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
 
-    Problem(ProblemType problemType);
+    Problem(ProblemType problemType,std::string record_file);
 
     ~Problem();
 
@@ -187,6 +188,8 @@ private:
     bool bDebug = false;
     double t_hessian_cost_ = 0.0;
     double t_PCGsovle_cost_ = 0.0;
+
+    std::ofstream info_file;
 };
 
 }

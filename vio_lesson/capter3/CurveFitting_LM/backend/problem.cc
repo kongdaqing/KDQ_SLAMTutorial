@@ -22,13 +22,17 @@ void Problem::LogoutVectorSize() {
     //           " edges:" << edges_.size();
 }
 
-Problem::Problem(ProblemType problemType) :
+Problem::Problem(ProblemType problemType,std::string record_file) :
         problemType_(problemType) {
     LogoutVectorSize();
     verticies_marg_.clear();
+    std::string file_name = record_file + "info_opt.cvs";
+    info_file.open(file_name);
 }
 
-Problem::~Problem() {}
+Problem::~Problem() {
+    info_file.close();
+}
 
 bool Problem::AddVertex(std::shared_ptr<Vertex> vertex) {
     if (verticies_.find(vertex->Id()) != verticies_.end()) {
@@ -77,8 +81,9 @@ bool Problem::Solve(int iterations) {
     bool stop = false;
     int iter = 0;
     while (!stop && (iter < iterations)) {
-        std::cout << "iter: " << iter << " , chi= " << currentChi_ << " , Lambda= " << currentLambda_
+        std::cout << "iter: " << iter << " , chi= " << currentChi_ << " , b_norm= "<< b_.norm() << " , Lambda= " << currentLambda_
                   << std::endl;
+        info_file << iter << "," << currentChi_ << "," << b_.norm() << "," << currentLambda_ << std::endl;
         bool oneStepSuccess = false;
         int false_cnt = 0;
         while (!oneStepSuccess)  // 不断尝试 Lambda, 直到成功迭代一步
@@ -91,7 +96,8 @@ bool Problem::Solve(int iterations) {
             RemoveLambdaHessianLM();
 
             // 优化退出条件1： delta_x_ 很小则退出
-            if (delta_x_.squaredNorm() <= 1e-6 || false_cnt > 10) {
+            //std::cout << "delta_x = " << delta_x_.squaredNorm() << std::endl;
+            if (delta_x_.squaredNorm() <= 1e-20 || false_cnt > 10) {      
                 stop = true;
                 break;
             }
@@ -248,7 +254,7 @@ void Problem::ComputeLambdaInitLM() {
     if (err_prior_.rows() > 0)
         currentChi_ += err_prior_.norm();
 
-    stopThresholdLM_ = 1e-6 * currentChi_;          // 迭代条件为 误差下降 1e-6 倍
+    stopThresholdLM_ = 1e-10 * currentChi_;          // 迭代条件为 误差下降 1e-6 倍
 
     double maxDiagonal = 0;
     ulong size = Hessian_.cols();

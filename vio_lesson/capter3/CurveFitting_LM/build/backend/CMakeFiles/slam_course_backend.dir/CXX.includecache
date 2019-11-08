@@ -37,6 +37,8 @@ backend/edge.h
 ../backend/backend/edge.h
 backend/vertex.h
 ../backend/backend/vertex.h
+fstream
+-
 
 ../backend/vertex.h
 backend/eigen_types.h
@@ -48,14 +50,6 @@ ctime
 cstdlib
 -
 chrono
--
-
-/home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/edge.cc
-backend/vertex.h
-/home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/backend/vertex.h
-backend/edge.h
-/home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/backend/edge.h
-iostream
 -
 
 /home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/problem.cc
@@ -72,12 +66,6 @@ backend/problem.h
 utils/tic_toc.h
 /home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/utils/tic_toc.h
 omp.h
--
-
-/home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/vertex.cc
-backend/vertex.h
-/home/zx/workspace/KDQ_SLAMTutorial/vio_lesson/capter3/CurveFitting_LM/backend/backend/vertex.h
-iostream
 -
 
 /usr/local/include/eigen3/Eigen/Cholesky
