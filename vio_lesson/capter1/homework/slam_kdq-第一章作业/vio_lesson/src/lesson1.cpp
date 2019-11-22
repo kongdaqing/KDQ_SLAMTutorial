@@ -13,6 +13,9 @@ int main()
   Eigen::Matrix3d delta_R;
   delta_R << 1,-0.03,0.02,0.03,1,-0.01,-0.02,0.01,1;
   Eigen::Quaterniond delta_q = Eigen::Quaterniond(1,0.01/2,0.02/2,0.03/2);
+  Eigen::AngleAxisd so3(delta_R);
+  Eigen::Vector3d so3_vec = so3.angle()*so3.axis();
+  cout << "so3: " << so3_vec << endl;
 
   cout << "Matrix R: \n" << R << endl;
   cout << "Quaternion q: \n" << q.coeffs().transpose() << endl;
